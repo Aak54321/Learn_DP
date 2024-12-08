@@ -58,8 +58,11 @@ public class uniquePath {
                 if(r == 0 && c == 0)
                     temp[c] = 1;
                 else {
-                if( r > 0 && c > 0)
-                    temp[c] = prev[r-1] + temp[c-1];
+                if( r > 0 && c > 0) {
+                    int up = prev[r-1];
+                    int left = temp[c-1];
+                    temp[c] = up + left;
+                }
                 }
            }
            // refer the prev to temp
