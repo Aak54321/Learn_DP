@@ -36,7 +36,6 @@ public class NinjaTraining{
 
         // outer loop 'n' cases
         // innner loop doing operations for each case
-        int i;
         for(int day=1;day<activities.length;day++) {
             // all possible recent tasks
             // 0 / 1 / 2 / 3
