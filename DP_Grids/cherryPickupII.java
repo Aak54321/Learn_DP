@@ -95,11 +95,14 @@ public class cherryPickupII {
         for (int row = n - 2; row >= 0; row--) {
             for (int bob = 0; bob < m; bob++) {
                 for (int alice = 0; alice < m; alice++) {
+
                     int maxi = Integer.MIN_VALUE;
                     int[] actions = { -1, 0, 1 };
                     // try out all possible actions
+
                     for (int action1 : actions) {
                         for (int action2 : actions) {
+
                             int ans = 0;
                             if (bob == alice)
                                 ans = arr[row][bob];
@@ -113,10 +116,12 @@ public class cherryPickupII {
                             // valid
                             else
                                 ans += dp[row + 1][bob + action1][alice + action2];
+                            // check the maximum
                             maxi = Math.max(maxi, ans);
-                        }
-                    }
+                        } // action 2 ends here
+                    } // action 1 ends here
 
+                    // update the maxium for that row
                     dp[row][bob][alice] = maxi;
                 }
             }
