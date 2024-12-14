@@ -74,6 +74,9 @@ public class workbench {
         // return it
         return dp[n-1][3];
     }
+    public static int chePickII(int row, int bob_col, int alice_col,int[][] arr) {
+        if(bob_col > arr.length-1 || bob_col < 0 || )
+    }
     public static void main(String[] args) {
        int[][] training = new int[][]{
         {1,2,5},
