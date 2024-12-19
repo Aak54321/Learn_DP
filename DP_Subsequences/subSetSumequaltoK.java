@@ -1,6 +1,6 @@
 package DP_Subsequences;
 
-// subSets = Subsequences
+// subSets = Subsequences without ordering
 import java.util.*;
 
 public class subSetSumequaltoK {
@@ -90,7 +90,7 @@ public class subSetSumequaltoK {
         int[][] dp = new int[arr.length][target + 1];
         for (int[] d : dp)
             Arrays.fill(d, -1);
-        res = subSetSumequaltoKSptOpt(arr, target);
+        res = subSetSumequaltoKTab(arr, target);
         System.out.println(res);
     }
 }

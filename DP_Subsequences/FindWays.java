@@ -1,5 +1,7 @@
-public class workbench {
-    public static int findWays(int i, int target, int[] arr) {
+package DP_Subsequences;
+
+public class FindWays {
+      public static int findWays(int i, int target, int[] arr) {
         if (i == 0)
             return (arr[i] == target) ? 1 : 0;
         if (target == 0)
@@ -78,5 +80,5 @@ public class workbench {
         int res = findWaysSptOpt(arr, 5);
         System.out.println(res);
     }
-
+  
 }
